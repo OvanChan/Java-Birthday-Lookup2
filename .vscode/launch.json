@@ -1,0 +1,17 @@
+{
+    //
+    // launch.json
+    // Note: please be sure to have mainClass and projectName defined in your configuration
+    //
+    //
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Debug (Launch) - Current File",
+            "request": "launch",
+            "mainClass": "${file}",
+            "projectName": "javaProject"
+        },
+    ]
+}
