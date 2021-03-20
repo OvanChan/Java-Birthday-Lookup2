@@ -8,10 +8,17 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch BirthdayExample",
+            "request": "launch",
+            "mainClass": "src.BirthdayExample",
+            "projectName": "Java-Birthday-Lookup2_9243012a"
+        },
+        {
+            "type": "java",
             "name": "Debug (Launch) - Current File",
             "request": "launch",
             "mainClass": "${file}",
             "projectName": "javaProject"
-        },
+        }
     ]
 }
