@@ -5,6 +5,7 @@ import java.util.*;
 import org.json.simple.*;
 import org.json.simple.parser.*;
 
+
 public class BirthdayExample {
 
     //
@@ -55,10 +56,11 @@ public class BirthdayExample {
         Scanner input = new Scanner(System.in);
         System.out.print("Enter a name:");
         String name = input.nextLine();
+    
         
-        // print user input
+        // print user inputp
         System.out.println("name = " + name);
-
+    
         // close the scanner
         input.close();
 
@@ -92,12 +94,13 @@ public class BirthdayExample {
             System.out.println("name = " + name);
             System.out.println("birthday = " + birthday);
 
+            Map<String, String> lookUp = new HashMap<String, String>();
+            lookUp.put(name, birthday);
+            
+            System.out.println(lookUp);
+            
         }
-
-
-
-
-
+    
     }
 
 }
