@@ -8,17 +8,23 @@ import org.json.simple.parser.*;
 
 public class BirthdayExample {
 
-    //
-    // Func: ReadJSONFile
-    // Desc: Reads a json file storing an array and returns an object 
-    // that can be iterated over
-    //
+    /* 
+    Dunc: ReadJSONFile
+    Desc: Reads a json file storing an array and returns an object 
+    that can be iterated over
+
+    Class are groups of functions,
+    1 code contains one main function
+    */
+
+
     public static JSONArray ReadJSONArrayFile(String fileName) {
 
-        
-        //
-        // read the birthday.json file and iterate over it
-        //
+        /* 
+        read the birthday.json file and iterate over it
+
+        parsing is converting
+        */
 
         //JSON parser object to parse read file
         JSONParser jsonParser = new JSONParser();
@@ -97,10 +103,11 @@ public class BirthdayExample {
             Map<String, String> lookUp = new HashMap<String, String>();
             lookUp.put(name, birthday);
             
-            System.out.println(lookUp);
-            
+            System.out.println(i);
+    
         }
+        
     
     }
-
+    
 }
