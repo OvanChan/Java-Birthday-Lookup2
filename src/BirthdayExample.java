@@ -61,11 +61,11 @@ public class BirthdayExample {
         // get user input
         Scanner input = new Scanner(System.in);
         System.out.print("Enter a name:");
-        String name = input.nextLine();
+        String key = input.nextLine();
     
         
         // print user inputp
-        System.out.println("name = " + name);
+        System.out.println("name = " + key);
     
         // close the scanner
         input.close();
@@ -89,6 +89,7 @@ public class BirthdayExample {
 
         // loop over list
         String birthday;
+        String name;
         JSONObject obj;
         for (Integer i = 0; i < jsonData.size() ; i++) {
 
@@ -99,15 +100,26 @@ public class BirthdayExample {
 
             System.out.println("name = " + name);
             System.out.println("birthday = " + birthday);
-
-            Map<String, String> lookUp = new HashMap<String, String>();
-            lookUp.put(name, birthday);
             
-            System.out.println(i);
-    
         }
         
-    
+        System.out.println(key);
+
+
+
+        /*
+        if name == i.get(name)
+        Avery H.:
+        return i.get(brithday)
+
+        Map<String, String> lookUp = new HashMap<String, String>();
+        lookUp.put(name, birthday);
+
+            String birthdayPoop = lookUp.get(birthday);
+        System.out.println(name);    
+        System.out.println(birthdayPoop);
+        */
+
     }
     
 }
