@@ -87,10 +87,12 @@ public class BirthdayExample {
 
         JSONArray jsonData = ReadJSONArrayFile(pathToFile);
 
+
         // loop over list
         String birthday;
         String name;
         JSONObject obj;
+        /*
         for (Integer i = 0; i < jsonData.size() ; i++) {
 
             // parse the object and pull out the name and birthday
@@ -102,8 +104,21 @@ public class BirthdayExample {
             System.out.println("birthday = " + birthday);
             
         }
-        
-        System.out.println(key);
+*/
+
+        for (Int i = 0; i < jsonData.size() ; i++) {
+            // parse the object and pull out the name and birthday
+            obj = (JSONObject) jsonData.get(i);
+            name = (String) obj.get("name");
+            if (name == key){
+            birthday = (String) obj.get("birthday");
+            System.out.println("birthday = " + birthday);
+            }
+           
+            }
+           
+
+
 
 
 
@@ -111,6 +126,13 @@ public class BirthdayExample {
         if name == i.get(name)
         Avery H.:
         return i.get(brithday)
+
+                        System.out.println("You entered this name: " + key);
+        if key == i.get(name);
+            return i.get(birthday);
+            System.out.println(birthday);
+        else System.out.println("Name not found");
+
 
         Map<String, String> lookUp = new HashMap<String, String>();
         lookUp.put(name, birthday);
