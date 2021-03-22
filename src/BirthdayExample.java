@@ -37,7 +37,7 @@ public class BirthdayExample {
             Object obj = jsonParser.parse(reader);
  
             birthdayList = (JSONArray) obj;
-            System.out.println(birthdayList);
+            // System.out.println(birthdayList);
  
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -91,22 +91,31 @@ public class BirthdayExample {
         // loop over list
         String birthday;
         String name;
+        Map<String, String> lookUp = new HashMap<String, String>();
         JSONObject obj;
-        /*
-        for (Integer i = 0; i < jsonData.size() ; i++) {
+                for (Integer i = 0; i < jsonData.size() ; i++) {
 
             // parse the object and pull out the name and birthday
             obj = (JSONObject) jsonData.get(i);
             birthday = (String) obj.get("birthday");
             name = (String) obj.get("name");
 
-            System.out.println("name = " + name);
-            System.out.println("birthday = " + birthday);
+            // System.out.println("name = " + name);
+            // System.out.println("birthday = " + birthday);
             
-        }
-*/
+           
+            lookUp.put(name, birthday);
 
-        for (Int i = 0; i < jsonData.size() ; i++) {
+        }
+               
+
+        System.out.println("Your input is = " + key);
+        String result = lookUp.get(key);
+        System.out.println("This person's birthday is on " + result);
+
+
+/*
+        for (int i = 0; i < jsonData.size() ; i++) {
             // parse the object and pull out the name and birthday
             obj = (JSONObject) jsonData.get(i);
             name = (String) obj.get("name");
@@ -117,10 +126,7 @@ public class BirthdayExample {
            
             }
            
-
-
-
-
+*/
 
         /*
         if name == i.get(name)
